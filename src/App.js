@@ -1,5 +1,6 @@
 import React from "react"
-
+import TodoList from "./components/TodoList"
+import TodoForm from "./components/TodoForm"
 const todo = [
   {
     name: "Clean car",
@@ -47,7 +48,7 @@ class App extends React.Component {
     })
   }
   // Add item
-  handleAddItem = (item) => {
+  handleAddItem = (name) => {
     const newItem = {
       name: name,
       id: Date.now(),
@@ -75,7 +76,7 @@ class App extends React.Component {
     return (
       <div>
         <div>
-          <h2>Welcome to your Todo App!</h2>
+          <h2>Make your choreography</h2>
           <TodoForm
             handleAddItem={this.handleAddItem}
             setState={this.setState}
